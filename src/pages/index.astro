@@ -3,20 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import firstcard from "../data/firstcard.json";
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Nabar.astro";
+
+import { Icon } from "astro-icon";
 // import Vision from "../layouts/Icons";
-// import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Welcome to Crown-Hill University">
 	<main>
-		<section class="flex h-screen">
+		<Navbar />
+		<section
+			class="flex h-screen text-[#fff] bg-[url('../../public/Images/hero-section-img.png')] bg-cover bg-center bg-no-repeat"
+		>
 			<div class="max-w-[50%] flex-col justify-center m-auto text-center">
 				<h1
 					class="text-[3vw] w-full m-auto text-center uppercase font-semibold"
 				>
 					Broaden Your Horizon In Crown Hill University
 				</h1>
-				<p class="min-w-[90%] m-auto mt-4">
+				<p class="max-w-[90%] m-auto mt-4">
 					Crown-Hill University is saddled with the responsibility of
 					promoting knowledge driven solutions through teaching,
 					learning, research and character development driven by
@@ -25,23 +30,42 @@ import Footer from "../components/Footer.astro";
 				</p>
 				<section class="flex gap-10 mt-5 justify-center">
 					<button
-						class="border-2 border-[#000] rounded w-[40%] h-[3rem] flex items-center text-center"
+						class="bg-[#fff] text-[#000] rounded-lg w-[40%] h-[3rem] flex items-center text-center relative"
 					>
-						<h4 class="w-[90%]">Apply Now</h4>
-						<span class="bg-[#893] w-[10%] h-full">K</span>
+						<h4 class="w-[80%] text-[#1F386B] font-semibold">
+							Apply Now
+						</h4>
+						<span
+							class="bg-[#1F386B] w-[20%] h-full rounded-tr-lg rounded-br-lg flex"
+						>
+							<Icon
+								name="mdi:key"
+								class="text-[#fff] w-6 h-6 m-auto"
+							/>
+						</span>
 					</button>
-					<button class="w-[30%] border-2 border-[#000] rounded"
-						>Student Login</button
+					<button
+						class="w-[30%] border-2 border-[#fff] rounded-lg flex items-center gap-6 justify-center"
+					>
+						<Icon
+							name="ph:student-light"
+							class="text-[#fff] w-6 h-6"
+						/>
+						Student Login</button
 					>
 				</section>
 			</div>
 		</section>
-		<section class="w-[80%] m-auto">
-			<div class="flex gap-10">
+		<section class="w-[80%] m-auto mt-[-3rem]">
+			<div class="flex lg:flex-row flex-col gap-10">
 				{
 					firstcard.map((data: any) => (
-						<div class="border-2 border-[#902] rounded py-1 px-2 w-[50%]">
+						<div class="bg-[#fff] rounded p-3 w-[50%] lg:m-0 m-auto">
 							<>
+								<img
+									src={`../../public/Images/${data.img}`}
+									class="w-[3rem] h-[3rem]"
+								/>
 								<h3 class="font-semibold text-lg">
 									{data.title}
 								</h3>
@@ -53,7 +77,7 @@ import Footer from "../components/Footer.astro";
 			</div>
 
 			<button
-				class="border-2 border-[#1F386B] flex m-auto mt-4 px-5 py-2 rounded font-semibold"
+				class="border-2 border-[#1F386B] text-[#1F386B] flex m-auto mt-10 px-5 py-2 rounded font-semibold"
 				>Apply For Admission</button
 			>
 		</section>

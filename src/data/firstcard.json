@@ -1,13 +1,16 @@
 [
     {
+        "img": "vision.png",
         "title": "Vision",
         "desc": "To be a knowledge driven institution using the instrumentality of teaching, learning, research and character development for nation building."
     },
     {
+        "img": "mission.png",
         "title": "Mission",
         "desc": "To promote knowledge driven solutions through teaching, learning, research and character development driven by integrated information and communication technology facilities"
     },
     {
+        "img": "core.png",
         "title": "Our Core Values",
         "desc": "Service, Probity, Enterprise, Accountability, and Knowledge (SPEAK)"
     }
