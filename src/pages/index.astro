@@ -17,9 +17,9 @@ import { Icon } from "astro-icon";
 		<section
 			class="flex h-screen text-[#fff] bg-[url('../../public/Images/hero-section-img.png')] bg-cover bg-center bg-no-repeat"
 		>
-			<div class="max-w-[50%] flex-col justify-center m-auto text-center">
+			<div class="md:max-w-[50%] max-w-[85%] flex-col justify-center m-auto text-center">
 				<h1
-					class="text-[3vw] w-full m-auto text-center uppercase font-semibold"
+					class="md:text-[3vw] text-2xl w-full m-auto text-center uppercase font-semibold font-sanbold"
 				>
 					Broaden Your Horizon In Crown Hill University
 				</h1>
@@ -30,9 +30,9 @@ import { Icon } from "astro-icon";
 					integrated information and communication technology
 					facilities, and more.
 				</p>
-				<section class="flex gap-10 mt-5 justify-center">
+				<section class="flex lg:flex-row flex-col  lg:gap-10 space-y-5 lg:space-y-0 mt-5 justify-center">
 					<button
-						class="text-[#000] w-[40%] h-[3rem] flex items-center text-center relative"
+						class="text-[#000] lg:w-[40%] h-[3rem] flex items-center text-center relative"
 					>
 						<h4
 							class="w-[80%] h-full flex items-center justify-center bg-[#fff] rounded-tl-lg rounded-bl-lg text-[#1F386B] font-semibold"
@@ -49,7 +49,7 @@ import { Icon } from "astro-icon";
 						</span>
 					</button>
 					<button
-						class="w-[30%] border-2 border-[#fff] rounded-lg flex items-center gap-6 justify-center"
+						class="lg:w-[30%] h-[3rem] border-2 border-[#fff] rounded-lg flex items-center gap-6 justify-center"
 					>
 						<Icon
 							name="ph:student-light"
@@ -60,11 +60,11 @@ import { Icon } from "astro-icon";
 				</section>
 			</div>
 		</section>
-		<section class="w-[80%] m-auto mt-[-3rem]">
+		<section class="w-[80%] m-auto mt-[-3rem] ">
 			<div class="flex lg:flex-row flex-col gap-10">
 				{
 					firstcard.map((data: any) => (
-						<div class="bg-[#fff] rounded p-3 w-[50%] lg:m-0 m-auto">
+						<div class="bg-[#fff] rounded p-3 lg:w-[50%] w-[80%] lg:m-0 m-auto">
 							<>
 								<img
 									src={`../../public/Images/${data.img}`}
@@ -96,10 +96,10 @@ import { Icon } from "astro-icon";
 				</p>
 			</div>
 			<div class="mt-14">
-				<div class="grid grid-cols-3 gap-y-[10rem] gap-x-10">
+				<div class="grid lg:grid-cols-3 gap-y-[10rem] gap-x-10">
 					{
 						facilities.map((data) => (
-							<div class="relative h-[200px] w-[335px]">
+							<div class="relative h-[20rem] w-[80%] m-auto lg:m-0 lg:h-[200px] lg:w-[335px]">
 								<img
 									src={`../../public/Images/${data.img}.png`}
 									class="w-full h-full z-[-1] relative"
@@ -129,10 +129,10 @@ import { Icon } from "astro-icon";
 				</p>
 			</div>
 			<div class="mt-14">
-				<div class="grid grid-cols-3 gap-x-5">
+				<div class="grid lg:grid-cols-3 gap-x-5 gap-y-6">
 					{
 						blog.map((data) => (
-							<div class="relative bg-[#fff] px-3 py-4 w-[23rem] rounded">
+							<div class="relative bg-[#fff] px-3 py-4 lg:w-[23rem] rounded">
 								<img
 									src={`../../public/Images/${data.img}`}
 									class="w-full h-[14rem]"

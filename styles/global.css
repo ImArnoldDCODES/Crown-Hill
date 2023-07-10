@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+  font-family: "SANSATION_BOLD";
+  src: url("../public/fonts/san/Sansation_Bold.ttf");
+}
+@font-face {
+  font-family: "SANSATION_ITALIC";
+  src: url("../public/fonts/san/Sansation_Italic.ttf");
+}
+@font-face {
+  font-family: "SANSATION_LIGHT";
+  src: url("../public/fonts/san/Sansation_Light.ttf");
+}
+@font-face {
+  font-family: "SANSATION_REGULAR";
+  src: url("../public/fonts/san/Sansation_Regular.ttf");
+}
