@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import firstcard from "../data/firstcard.json";
+import facilities from "../data/facilities.json";
+import blog from "../data/blog.json";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Nabar.astro";
 
@@ -30,9 +32,11 @@ import { Icon } from "astro-icon";
 				</p>
 				<section class="flex gap-10 mt-5 justify-center">
 					<button
-						class="bg-[#fff] text-[#000] rounded-lg w-[40%] h-[3rem] flex items-center text-center relative"
+						class="text-[#000] w-[40%] h-[3rem] flex items-center text-center relative"
 					>
-						<h4 class="w-[80%] text-[#1F386B] font-semibold">
+						<h4
+							class="w-[80%] h-full flex items-center justify-center bg-[#fff] rounded-tl-lg rounded-bl-lg text-[#1F386B] font-semibold"
+						>
 							Apply Now
 						</h4>
 						<span
@@ -91,7 +95,66 @@ import { Icon } from "astro-icon";
 					We've got a conducive and serene environment for learning!
 				</p>
 			</div>
+			<div class="mt-14">
+				<div class="grid grid-cols-3 gap-y-[10rem] gap-x-10">
+					{
+						facilities.map((data) => (
+							<div class="relative h-[200px] w-[335px]">
+								<img
+									src={`../../public/Images/${data.img}.png`}
+									class="w-full h-full z-[-1] relative"
+								/>
+
+								<div class="bg-[#fff] mt-[-2rem] w-[15rem] h-[7rem] m-auto flex-col text-center rounded py-4">
+									<h4 class="font-semibold text-lg">
+										{data.title}
+									</h4>
+									<button class="border-[1px] border-[#EAEAEA] mt-5 px-3 py-1">
+										More Photos
+									</button>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
 		</section>
+
+		<section class="w-[90%] m-auto mt-[14rem]">
+			<div class="flex-col gap-3 text-center">
+				<h4 class="text-[#3056D3] font-semibold">Blog</h4>
+				<h2 class="font-bold text-2xl text-[#2E2E2E]">Recent News</h2>
+				<p class="font-semibold text-[#637381]">
+					Get updated with latest news around the Campus!
+				</p>
+			</div>
+			<div class="mt-14">
+				<div class="grid grid-cols-3 gap-x-5">
+					{
+						blog.map((data) => (
+							<div class="relative bg-[#fff] px-3 py-4 w-[23rem] rounded">
+								<img
+									src={`../../public/Images/${data.img}`}
+									class="w-full h-[14rem]"
+								/>
+								<div class="w-full h-[60%] flex-col">
+									<h3 class="font-semibold pt-5 pb-3 text-lg">
+										{data.title}
+									</h3>
+									<p class="text-sm text-[#333333B2] font-base">
+										{data.desc}
+									</p>
+									<button class="text-[#1F386B] font-base mt-4 text-base">
+										Read More {">>"}
+									</button>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 	</main>
 </Layout>

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Auditorium",
+        "img": "auditorium"
+    },
+    {
+        "title": "E-library",
+        "img": "e-library"
+    },
+    {
+        "title": "Gazebo",
+        "img": "gazebo"
+    },
+    {
+        "title": "Cafeteria",
+        "img": "cafeteria"
+    },
+    {
+        "title": "Sport Complex",
+        "img": "sport-complex"
+    },
+    {
+        "title": "Laboraties",
+        "img": "laboraties"
+    }
+]
