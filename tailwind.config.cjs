@@ -4,10 +4,11 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sanbold: ["SANSATION_BOLD", "cursive"],
+                sanbold: ["SANSATION_BOLD", "poppins"],
                 sanitalic: ["SANSATION_ITALIC", "cursive"],
                 sanlight: ["SANSATION_LIGHT", "cursive"],
                 sanregular: ["SANSATION_REGULAT", "cursive"],
+                'poppins': ['Poppins', 'sans-serif']
             },
         },
     },

@@ -4,7 +4,9 @@ import Icon from "astro-icon";
 ---
 
 <section class="bg-[#fff] h-[12vh] pt-4">
-    <div class="w-full h-full flex items-center justify-between px-10">
+    <div
+        class="w-full h-full flex items-center justify-between px-10"
+    >
         <div>
             <img src={Logo} class="w-[10rem] h-[3rem]" />
         </div>
@@ -28,6 +30,9 @@ import Icon from "astro-icon";
                     <Icon name="raphael:arrowdown" class="w-4 h-3" />
                 </li>
             </ul>
+        </div>
+        <div class="lg:hidden block w-fit h-fit">
+            <Icon name="charm:menu-hamburger" class="w-12 h-12 text-[#000]" />
         </div>
     </div>
 </section>
