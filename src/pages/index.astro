@@ -15,7 +15,7 @@ import { Icon } from "astro-icon";
 	<main>
 		<Navbar />
 		<section
-			class="flex h-screen text-[#fff] bg-[url('../../public/Images/hero-section-img.png')] bg-cover bg-center bg-no-repeat"
+			class="flex h-screen text-[#fff] bg-[url('/../../public/Images/hero-section-img.png')] bg-cover bg-center bg-no-repeat"
 		>
 			<div class="md:max-w-[50%] max-w-[85%] flex-col justify-center m-auto text-center">
 				<h1
@@ -67,7 +67,7 @@ import { Icon } from "astro-icon";
 						<div class="bg-[#fff] rounded p-3 lg:w-[50%] w-[80%] lg:m-0 m-auto">
 							<>
 								<img
-									src={`../../public/Images/${data.img}`}
+									src={`/../../public/Images/${data.img}`}
 									class="w-[3rem] h-[3rem]"
 								/>
 								<h3 class="font-semibold text-lg">
@@ -101,7 +101,7 @@ import { Icon } from "astro-icon";
 						facilities.map((data) => (
 							<div class="relative h-[20rem] w-[80%] m-auto lg:m-0 lg:h-[200px] lg:w-[335px]">
 								<img
-									src={`../../public/Images/${data.img}.png`}
+									src={`/../../public/Images/${data.img}.png`}
 									class="w-full h-full z-[-1] relative"
 								/>
 
@@ -134,7 +134,7 @@ import { Icon } from "astro-icon";
 						blog.map((data) => (
 							<div class="relative bg-[#fff] px-3 py-4 lg:w-[23rem] rounded">
 								<img
-									src={`../../public/Images/${data.img}`}
+									src={`/../../public/Images/${data.img}`}
 									class="w-full h-[14rem]"
 								/>
 								<div class="w-full h-[60%] flex-col">
